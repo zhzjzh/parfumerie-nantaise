@@ -2,49 +2,106 @@
 /*
 Plugin Name: Vente de Parfums
 Description: Affiche une page de vente de parfums avec une liste de prix et des liens sociaux.
-Version: 1.4
+Version: 1.5
 Author: Votre Nom
 */
 
 // Création du shortcode pour afficher la page
 function vente_parfums_shortcode() {
     ob_start(); ?>
-    <div style="text-align:center; font-family: Arial, sans-serif; color: #000; height: 100vh; background-image: url('pfn21.jpeg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; max-width: 100%;">
-        <h1 style="color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Bienvenue sur PFN 44</h1>
-        <p style="color: #ffcc00; font-size: 22px; font-weight: bold;">Découvrez nos produits exclusifs à des prix imbattables !</p>
-        <div style="background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 8px; color: #fff; width: 80%; max-width: 600px; box-sizing: border-box;">
+    <div class="vente-parfums-container">
+        <h1>Bienvenue sur PFN 44</h1>
+        <p>Découvrez nos produits exclusifs à des prix imbattables !</p>
+        <div class="price-list">
             <h2>Liste des prix</h2>
-            <table style="width: 100%; border-collapse: collapse; color: #fff;">
+            <table>
                 <thead>
                     <tr>
-                        <th style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">Parfum</th>
-                        <th style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">Prix</th>
+                        <th>Parfum</th>
+                        <th>Prix</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">1- Parfum</td>
-                        <td style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">10€</td>
+                        <td>1- Parfum</td>
+                        <td>10€</td>
                     </tr>
                     <tr>
-                        <td style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">2- Parfum</td>
-                        <td style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">20€</td>
+                        <td>2- Parfum</td>
+                        <td>20€</td>
                     </tr>
                     <tr>
-                        <td style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">3- Parfum</td>
-                        <td style="border: 1px solid rgba(255, 255, 255, 0.5); padding: 10px;">30€</td>
+                        <td>3- Parfum</td>
+                        <td>30€</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div style="margin-top: 20px;">
-            <a href="https://snapchat.com/t/51MkGLHe" target="_blank" style="display: inline-block; padding: 10px 20px; background: rgba(255, 255, 255, 0.3); color: #fff; text-decoration: none; border-radius: 5px; margin: 5px;">Suivez-nous sur Snapchat</a>
-            <a href="https://www.vinted.fr/member/250532429-parfumerienantaise" target="_blank" style="display: inline-block; padding: 10px 20px; background: rgba(255, 255, 255, 0.3); color: #fff; text-decoration: none; border-radius: 5px; margin: 5px;">Visitez notre Vinted</a>
+        <div class="social-links">
+            <a href="https://snapchat.com/t/51MkGLHe" target="_blank">Suivez-nous sur Snapchat</a>
+            <a href="https://www.vinted.fr/member/250532429-parfumerienantaise" target="_blank">Visitez notre Vinted</a>
         </div>
     </div>
     <style>
+        .vente-parfums-container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #000;
+            height: 100vh;
+            background-image: url('pfn21.jpeg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 100%;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .price-list {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff;
+            width: 80%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
         @media screen and (max-width: 768px) {
-            div {
+            .vente-parfums-container {
                 width: 100%;
                 padding: 10px;
                 background-size: contain;

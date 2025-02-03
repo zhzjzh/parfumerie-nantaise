@@ -2,14 +2,14 @@
 /*
 Plugin Name: Vente de Parfums
 Description: Affiche une page de vente de parfums avec une liste de prix et des liens sociaux.
-Version: 1.3
+Version: 1.4
 Author: Votre Nom
 */
 
 // Création du shortcode pour afficher la page
 function vente_parfums_shortcode() {
     ob_start(); ?>
-    <div style="text-align:center; font-family: Arial, sans-serif; color: #000; height: 100vh; background-image: url('pfn21.jpeg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+    <div style="text-align:center; font-family: Arial, sans-serif; color: #000; height: 100vh; background-image: url('pfn21.jpeg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; max-width: 100%;">
         <h1 style="color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Bienvenue sur PFN 44</h1>
         <p style="color: #ffcc00; font-size: 22px; font-weight: bold;">Découvrez nos produits exclusifs à des prix imbattables !</p>
         <div style="background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 8px; color: #fff; width: 80%; max-width: 600px;">
@@ -49,6 +49,7 @@ function vente_parfums_shortcode() {
                 padding: 10px;
                 background-size: contain;
                 background-position: top center;
+                box-sizing: border-box;
             }
             h1 {
                 font-size: 22px;

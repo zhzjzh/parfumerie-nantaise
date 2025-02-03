@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de Parfums</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #000;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('image21.jpeg.png');
+            background-size: 105%; /* Dézoom pour afficher le titre de l'arrière-plan */
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 60px;
+        }
+        .price-list {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff;
+            margin-top: 40px;
+            transform: translateX(-10%); /* Décale le tableau un peu à gauche */
+        }
+        .price-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .price-list th, .price-list td {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 12px;
+            text-align: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .social-links {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            width: 200px;
+            justify-content: center;
+        }
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .social-links img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur LA PAGE DE PFN 44</h1>
+    <div class="content">
+        <p>Découvrez nos parfums exclusifs à des prix imbattables !</p>
+        <div class="price-list">
+            <h2>Liste des prix</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Parfum</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1- Parfum</td>
+                        <td>10€</td>
+                    </tr>
+                    <tr>
+                        <td>2- Parfum</td>
+                        <td>20€</td>
+                    </tr>
+                    <tr>
+                        <td>3- Parfum</td>
+                        <td>30€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="https://snapchat.com/t/51MkGLHe" target="_blank">
+            <img src="téléchargement.png" alt="Snapchat Icon">
+            Suivez-nous sur Snapchat
+        </a>
+        <a href="https://www.vinted.fr/member/250532429-parfumerienantaise" target="_blank">
+            Visitez notre Vinted
+        </a>
+    </div>
+</body>
+</html>
